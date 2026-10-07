@@ -1,1 +1,120 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recarga de batería de carro a domicilio | Arranque y servicio técnico</title>
+  <meta name="description" content="Servicio técnico de batería de carro: arranque si se descargó, recarga y cambio a domicilio. Precio se confirma antes. No somos una marca de baterías." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#101820;--y:#f5b400;--bg:#f4f6f8;--muted:#5c6872;--line:#e3e7ec}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:#14202c;line-height:1.55}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .wrap{width:min(1100px,calc(100% - 32px));margin-inline:auto}
+    header{position:sticky;top:0;background:#101820;z-index:20}
+    .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between}
+    .brand{color:#fff;font-weight:800}
+    .links{display:flex;gap:16px;color:#d5dde6;font-size:14px}
+    .btn{display:inline-flex;border:0;border-radius:999px;padding:12px 18px;font-weight:700;font-family:inherit;cursor:pointer}
+    .btn-y{background:var(--y);color:#111}
+    .btn-wa{background:#25D366;color:#fff}
+    .note{background:#fff8e6;color:#7a5b00;font-size:13px;text-align:center;padding:8px 12px}
+    .hero{position:relative;color:#fff}
+    .bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,18,.9),rgba(10,14,18,.35)),url("img/domicilio.jpg") center/cover}
+    .grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:52px 0;align-items:center}
+    h1{font-size:clamp(30px,4.6vw,46px);line-height:1.08;margin:8px 0 12px}
+    .kicker{color:var(--y);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+    .lead{color:#d7e0e8;max-width:520px}
+    .card{background:#fff;color:#14202c;border-radius:18px;padding:20px}
+    label{display:block;font-size:13px;font-weight:600;margin:10px 0 5px}
+    input,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit}
+    section{padding:56px 0}
+    .head{text-align:center;max-width:640px;margin:0 auto 22px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .svc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    .svc img{height:150px;width:100%;object-fit:cover}
+    .svc div{padding:14px}
+    .svc p{color:var(--muted);font-size:14px}
+    footer{background:#101820;color:#c9d3dc;padding:26px 0;font-size:14px}
+    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .foot a{color:#f5b400}
+    .wa{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:24px}
+    @media(max-width:860px){.links{display:none}.grid,.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="note">Servicio técnico independiente. No somos la marca de la batería ni un concesionario. El precio se confirma antes de ir.</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">Recarga Batería Carro</a>
+      <nav class="links">
+        <a href="#servicio">Servicio</a>
+        <a href="politicas.html">Políticas</a>
+      </nav>
+      <a class="btn btn-y" href="#pedir">Pedir visita</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="bg"></div>
+    <div class="wrap grid">
+      <div>
+        <div class="kicker">A domicilio · Servicio técnico</div>
+        <h1>Si se descargó, la prendemos o la recargamos.</h1>
+        <p class="lead">Llegamos al carro, medimos la batería y el arranque. Si solo está descargada, damos paso de corriente o recarga. Si ya no sostiene carga, te cotizamos el cambio antes de instalar.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+          <a class="btn btn-y" href="#pedir">Pedir el servicio</a>
+          <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20se%20me%20descarg%C3%B3%20la%20bater%C3%ADa%20del%20carro" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <form class="card" id="f">
+        <h3>Dónde está el carro</h3>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" required placeholder="Tu nombre">
+        <label for="tel">WhatsApp</label>
+        <input id="tel" required placeholder="300 000 0000">
+        <label for="auto">Marca y modelo</label>
+        <input id="auto" placeholder="Ej. Chevrolet Spark">
+        <label for="srv">Qué pasa</label>
+        <select id="srv">
+          <option>No prende, parece descargada</option>
+          <option>Quiero recarga</option>
+          <option>Quiero paso de corriente</option>
+          <option>Quiero batería nueva</option>
+        </select>
+        <label for="zona">Dirección o barrio</label>
+        <input id="zona" placeholder="Barrio y ciudad">
+        <label style="font-weight:500;display:flex;gap:8px;align-items:flex-start">
+          <input id="ok" type="checkbox" required style="width:auto;margin-top:4px">
+          <span>Acepto la <a href="politicas.html" style="color:#9a7200">política de datos</a>.</span>
+        </label>
+        <button class="btn btn-y" type="submit" style="width:100%;margin-top:12px">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <section id="servicio">
+    <div class="wrap">
+      <div class="head"><h2>Qué incluye el servicio técnico</h2><p style="color:var(--muted)">No toda batería descargada se puede salvar. Primero se prueba.</p></div>
+      <div class="cards">
+        <article class="svc"><img src="img/domicilio.jpg" alt="Arranque a domicilio"><div><h3>Prender a domicilio</h3><p>Paso de corriente si el carro no arranca y la batería aún responde.</p></div></article>
+        <article class="svc"><img src="img/recarga.jpg" alt="Recarga de batería"><div><h3>Recarga</h3><p>Carga controlada cuando se bajó por luces, radio o días sin uso.</p></div></article>
+        <article class="svc"><img src="img/baterias.jpg" alt="Cambio de batería"><div><h3>Cambio si no sirve</h3><p>Si está sulfatada o no sostiene carga, cotizamos batería nueva antes de instalarla.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <div><strong style="color:#fff">Recarga Batería Carro</strong><br>Servicio técnico a domicilio</div>
+      <div><a href="politicas.html">Datos, términos, garantía y cookies</a><br>Cambia el 300 111 2233</div>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/573001112233?text=Hola%2C%20se%20me%20descarg%C3%B3%20la%20bater%C3%ADa%20del%20carro" target="_blank" rel="noopener">✆</a>
+  <script>
+    document.getElementById('f').addEventListener('submit', function(e){
+      e.preventDefault();
+      const t = encodeURIComponent('Hola, soy '+document.getElementById('nombre').value.trim()+'. Se descargó la batería.\nWhatsApp: '+document.getElementById('tel').value.trim()+'\nAuto: '+document.getElementById('auto').value.trim()+'\nServicio: '+document.getElementById('srv').value+'\nZona: '+document.getElementById('zona').value.trim());
+      window.open('https://wa.me/573001112233?text='+t,'_blank');
+    });
+  </script>
+</body>
+</html>
